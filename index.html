@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SLOEE: от бомжа до легенды soundcloud</title>
+    <title>SLOEE: от бомжа до легенды Soundcloud</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -840,15 +840,15 @@
             totalClicks: 0,
             playTime: 0,
             producers: [
-                { id: 'mic', name: 'Обновить FLstudio', basePrice: 15, baseCps: 0.1, owned: 0, unlocked: true, emoji: '🎤' },
-                { id: 'guitar', name: 'Кофе за 400р', basePrice: 100, baseCps: 0.5, owned: 0, unlocked: false, emoji: '🎸' },
-                { id: 'drums', name: 'Dr.beats от Хованского', basePrice: 500, baseCps: 2, owned: 0, unlocked: false, emoji: '🥁' },
-                { id: 'synth', name: 'Синтезатор с Авито', basePrice: 3000, baseCps: 10, owned: 0, unlocked: false, emoji: '🎹' },
-                { id: 'studio', name: 'Хата без бомжей', basePrice: 10000, baseCps: 40, owned: 0, unlocked: false, emoji: '🎧' },
-                { id: 'band', name: 'Обратно в Ставрополь', basePrice: 40000, baseCps: 100, owned: 0, unlocked: false, emoji: '👨‍🎤' },
-                { id: 'label', name: 'Барбершоп в Саратове', basePrice: 200000, baseCps: 400, owned: 0, unlocked: false, emoji: '🏷️' },
-                { id: 'festival', name: 'Послушать Макса', basePrice: 1666666, baseCps: 6666, owned: 0, unlocked: false, emoji: '🎪' },
-                { id: 'satellite', name: 'Сложить 2 и 2', basePrice: 123456789, baseCps: 98765, owned: 0, unlocked: false, emoji: '🛰️' }
+                { id: 'mic', name: 'Обновить FLstudio', basePrice: 15, baseCps: 0.1, owned: 0, unlocked: true, emoji: '' },
+                { id: 'guitar', name: 'Кофе за 400р', basePrice: 100, baseCps: 0.5, owned: 0, unlocked: false, emoji: '' },
+                { id: 'drums', name: 'Dr.beats от Хованского', basePrice: 500, baseCps: 2, owned: 0, unlocked: false, emoji: '' },
+                { id: 'synth', name: 'Синтезатор с Авито', basePrice: 3000, baseCps: 10, owned: 0, unlocked: false, emoji: '' },
+                { id: 'studio', name: 'Хата без бомжей', basePrice: 10000, baseCps: 40, owned: 0, unlocked: false, emoji: '' },
+                { id: 'band', name: 'Обратно в Ставрополь', basePrice: 40000, baseCps: 100, owned: 0, unlocked: false, emoji: '' },
+                { id: 'label', name: 'Барбершоп в Саратове', basePrice: 200000, baseCps: 400, owned: 0, unlocked: false, emoji: '🏷' },
+                { id: 'festival', name: 'Послушать Макса', basePrice: 1666666, baseCps: 6666, owned: 0, unlocked: false, emoji: '' },
+                { id: 'satellite', name: 'Сложить 2 и 2', basePrice: 123456789, baseCps: 98765, owned: 0, unlocked: false, emoji: '🛰' }
             ],
             upgrades: [
                 { id: 'better_mic', name: 'Плагины для FLstudio', description: 'Увеличивает мощность кликов на 0.2', price: 100, effect: () => { game.clickPower += 0.2 }, purchased: false, unlocked: true, emoji: '🎤' },
@@ -857,67 +857,67 @@
                 { id: 'auto_tune', name: 'Спросить у GPT', description: 'Увеличивает мощность кликов на 1.5', price: 5000, effect: () => { game.clickPower += 1.5 }, purchased: false, unlocked: true, emoji: '🎚️' },
                 { id: 'mic_stand', name: 'Скачать Ableton', description: 'Гитары производят в 2 раза больше', price: 10000, effect: () => { 
                     game.producers.find(p => p.id === 'guitar').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🎸' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'amplifier', name: 'Усилитель', description: 'Барабаны производят в 2 раза больше', price: 50000, effect: () => { 
                     game.producers.find(p => p.id === 'drums').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🔊' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'effects_pedal', name: 'Педаль эффектов', description: 'Синтезаторы производят в 2 раза больше', price: 200000, effect: () => { 
                     game.producers.find(p => p.id === 'synth').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🎛️' },
+                }, purchased: false, unlocked: false, emoji: '🎛' },
                 { id: 'acoustic_panel', name: 'Акустические панели', description: 'Студии производят в 2 раза больше', price: 1000000, effect: () => { 
                     game.producers.find(p => p.id === 'studio').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🧱' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'touring_van', name: 'Тур-автобус', description: 'Группы производят в 2 раза больше', price: 5000000, effect: () => { 
                     game.producers.find(p => p.id === 'band').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🚌' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'marketing', name: 'Маркетинг', description: 'Лейблы производят в 2 раза больше', price: 20000000, effect: () => { 
                     game.producers.find(p => p.id === 'label').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '📢' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'sponsorship', name: 'Спонсорство', description: 'Фестивали производят в 2 раза больше', price: 100000000, effect: () => { 
                     game.producers.find(p => p.id === 'festival').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🤝' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'global_coverage', name: 'Глобальное покрытие', description: 'Спутники производят в 2 раза больше', price: 500000000, effect: () => { 
                     game.producers.find(p => p.id === 'satellite').baseCps *= 2 
-                }, purchased: false, unlocked: false, emoji: '🌐' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'rhythm_course', name: 'Курс ритма', description: 'Клики дают на 7% больше', price: 1000, effect: () => { 
                     game.clickPower *= 1.07 
-                }, purchased: false, unlocked: true, emoji: '🎼' },
+                }, purchased: false, unlocked: true, emoji: '' },
                 { id: 'harmony_course', name: 'Курс гармонии', description: 'Клики дают на 12% больше', price: 5000, effect: () => { 
                     game.clickPower *= 1.12 
-                }, purchased: false, unlocked: true, emoji: '🎵' },
+                }, purchased: false, unlocked: true, emoji: '' },
                 { id: 'master_class', name: 'Мастер-класс', description: 'Клики дают на 30% больше', price: 25000, effect: () => { 
                     game.clickPower *= 1.3 
-                }, purchased: false, unlocked: true, emoji: '🎓' },
+                }, purchased: false, unlocked: true, emoji: '' },
                 { id: 'vocal_coach', name: 'Вокальный тренер', description: 'Микрофоны производят в 2 раза больше', price: 5000, effect: () => { 
                     game.producers.find(p => p.id === 'mic').baseCps *= 2 
-                }, purchased: false, unlocked: true, emoji: '👨‍🏫' },
+                }, purchased: false, unlocked: true, emoji: '' },
                 { id: 'guitar_lessons', name: 'Уроки гитары', description: 'Гитары производят на 60% больше', price: 15000, effect: () => { 
                     game.producers.find(p => p.id === 'guitar').baseCps *= 1.6 
-                }, purchased: false, unlocked: false, emoji: '🎸' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'drum_lessons', name: 'Уроки барабанов', description: 'Барабаны производят на 60% больше', price: 75000, effect: () => { 
                     game.producers.find(p => p.id === 'drums').baseCps *= 1.6 
-                }, purchased: false, unlocked: false, emoji: '🥁' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'music_theory', name: 'Теория музыки', description: 'Все производители работают на 7% лучше', price: 100000, effect: () => { 
                     game.producers.forEach(p => p.baseCps *= 1.07) 
-                }, purchased: false, unlocked: false, emoji: '📚' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'gold_record', name: 'Золотой диск', description: 'Все производители работают на 12% лучше', price: 1000000, effect: () => { 
                     game.producers.forEach(p => p.baseCps *= 1.12) 
-                }, purchased: false, unlocked: false, emoji: '🏆' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'platinum_record', name: 'Платиновый диск', description: 'Все производители работают на 18% лучше', price: 10000000, effect: () => { 
                     game.producers.forEach(p => p.baseCps *= 1.18) 
-                }, purchased: false, unlocked: false, emoji: '💿' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'diamond_record', name: 'Бриллиантовый диск', description: 'Все производители работают на 25% лучше', price: 100000000, effect: () => { 
                     game.producers.forEach(p => p.baseCps *= 1.25) 
-                }, purchased: false, unlocked: false, emoji: '💎' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'lucky_star', name: 'Счастливая звезда', description: 'Шанс 10% получить 10x битов при клике', price: 500000, effect: () => { 
                     // Эффект реализован в функции клика
-                }, purchased: false, unlocked: false, emoji: '🍀' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'diva', name: 'Дива', description: 'Шанс 5% получить 50x битов при клике', price: 5000000, effect: () => { 
                     // Эффект реализован в функции клика
-                }, purchased: false, unlocked: false, emoji: '👑' },
+                }, purchased: false, unlocked: false, emoji: '' },
                 { id: 'rock_god', name: 'Бог рока', description: 'Шанс 1% получить 100x битов при клике', price: 50000000, effect: () => { 
                     // Эффект реализован в функции клика
-                }, purchased: false, unlocked: false, emoji: '🤘' }
+                }, purchased: false, unlocked: false, emoji: '' }
             ],
             achievements: [
                 { id: 'first_click', name: 'Первый шаг', description: 'Сделайте первый клик', reward: '+0.2 к мощности кликов', condition: () => game.totalClicks >= 1, unlocked: false, effect: () => { game.clickPower += 0.2 }, emoji: '👣' },
@@ -1500,4 +1500,5 @@
     </script>
 </body>
 </html>
+
 
