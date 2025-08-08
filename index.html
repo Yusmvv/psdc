@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beat Factory: Музыкальный Кликер</title>
+    <title>SLOEE: от бомжа до легенды soundcloud</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -759,7 +759,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Beat Factory</h1>
+            <h1>SLOEE</h1>
             <div class="cps">Бит/сек: <span id="cpsValue">0</span></div>
         </header>
         
@@ -773,7 +773,7 @@
             </div>
             
             <div class="tab-container">
-                <button class="tab active" data-tab="producers">Студия</button>
+                <button class="tab active" data-tab="producers">Хата в СПБ</button>
                 <button class="tab" data-tab="upgrades">Апгрейды</button>
                 <button class="tab" data-tab="achievements">Достижения</button>
             </div>
@@ -815,7 +815,7 @@
             <h3 style="margin: 25px 0 15px 0; font-family: 'Montserrat', sans-serif; color: var(--accent);">Последние события</h3>
             <div id="eventLog" style="font-size: 0.85rem; max-height: 200px; overflow-y: auto; padding-right: 5px;">
                 <!-- Лог событий -->
-                <div style="padding: 8px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.1);">Добро пожаловать в Beat Factory!</div>
+                <div style="padding: 8px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.1);">Добро пожаловать в нищий мир битмейкера</div>
             </div>
         </aside>
     </div>
@@ -823,7 +823,7 @@
     <div class="event-modal" id="eventModal">
         <h3 id="modalTitle">Новое достижение!</h3>
         <p id="modalContent">Вы разблокировали новое достижение</p>
-        <button class="close-modal" onclick="closeModal()">Отлично!</button>
+        <button class="close-modal" onclick="closeModal()">ОПонятно</button>
     </div>
 
     <div class="theme-toggle" id="themeToggle">
@@ -840,22 +840,22 @@
             totalClicks: 0,
             playTime: 0,
             producers: [
-                { id: 'mic', name: 'Микрофон', basePrice: 15, baseCps: 0.1, owned: 0, unlocked: true, emoji: '🎤' },
-                { id: 'guitar', name: 'Гитара', basePrice: 100, baseCps: 0.5, owned: 0, unlocked: false, emoji: '🎸' },
-                { id: 'drums', name: 'Барабаны', basePrice: 500, baseCps: 2, owned: 0, unlocked: false, emoji: '🥁' },
-                { id: 'synth', name: 'Синтезатор', basePrice: 3000, baseCps: 10, owned: 0, unlocked: false, emoji: '🎹' },
-                { id: 'studio', name: 'Студия', basePrice: 10000, baseCps: 40, owned: 0, unlocked: false, emoji: '🎧' },
-                { id: 'band', name: 'Группа', basePrice: 40000, baseCps: 100, owned: 0, unlocked: false, emoji: '👨‍🎤' },
-                { id: 'label', name: 'Лейбл', basePrice: 200000, baseCps: 400, owned: 0, unlocked: false, emoji: '🏷️' },
-                { id: 'festival', name: 'Фестиваль', basePrice: 1666666, baseCps: 6666, owned: 0, unlocked: false, emoji: '🎪' },
-                { id: 'satellite', name: 'Спутник', basePrice: 123456789, baseCps: 98765, owned: 0, unlocked: false, emoji: '🛰️' }
+                { id: 'mic', name: 'Обновить FLstudio', basePrice: 15, baseCps: 0.1, owned: 0, unlocked: true, emoji: '🎤' },
+                { id: 'guitar', name: 'Кофе за 400р', basePrice: 100, baseCps: 0.5, owned: 0, unlocked: false, emoji: '🎸' },
+                { id: 'drums', name: 'Dr.beats от Хованского', basePrice: 500, baseCps: 2, owned: 0, unlocked: false, emoji: '🥁' },
+                { id: 'synth', name: 'Синтезатор с Авито', basePrice: 3000, baseCps: 10, owned: 0, unlocked: false, emoji: '🎹' },
+                { id: 'studio', name: 'Хата без бомжей', basePrice: 10000, baseCps: 40, owned: 0, unlocked: false, emoji: '🎧' },
+                { id: 'band', name: 'Обратно в Ставрополь', basePrice: 40000, baseCps: 100, owned: 0, unlocked: false, emoji: '👨‍🎤' },
+                { id: 'label', name: 'Барбершоп в Саратове', basePrice: 200000, baseCps: 400, owned: 0, unlocked: false, emoji: '🏷️' },
+                { id: 'festival', name: 'Послушать Макса', basePrice: 1666666, baseCps: 6666, owned: 0, unlocked: false, emoji: '🎪' },
+                { id: 'satellite', name: 'Сложить 2 и 2', basePrice: 123456789, baseCps: 98765, owned: 0, unlocked: false, emoji: '🛰️' }
             ],
             upgrades: [
-                { id: 'better_mic', name: 'Профессиональный микрофон', description: 'Увеличивает мощность кликов на 0.2', price: 100, effect: () => { game.clickPower += 0.2 }, purchased: false, unlocked: true, emoji: '🎤' },
-                { id: 'pop_filter', name: 'Поп-фильтр', description: 'Увеличивает мощность кликов на 0.3', price: 500, effect: () => { game.clickPower += 0.3 }, purchased: false, unlocked: true, emoji: '🌀' },
-                { id: 'golden_mic', name: 'Золотой микрофон', description: 'Увеличивает мощность кликов на 0.7', price: 2000, effect: () => { game.clickPower += 0.7 }, purchased: false, unlocked: true, emoji: '🌟' },
-                { id: 'auto_tune', name: 'Автотюн', description: 'Увеличивает мощность кликов на 1.5', price: 5000, effect: () => { game.clickPower += 1.5 }, purchased: false, unlocked: true, emoji: '🎚️' },
-                { id: 'mic_stand', name: 'Стойка для микрофона', description: 'Гитары производят в 2 раза больше', price: 10000, effect: () => { 
+                { id: 'better_mic', name: 'Плагины для FLstudio', description: 'Увеличивает мощность кликов на 0.2', price: 100, effect: () => { game.clickPower += 0.2 }, purchased: false, unlocked: true, emoji: '🎤' },
+                { id: 'pop_filter', name: 'Гайды с Ютуба', description: 'Увеличивает мощность кликов на 0.3', price: 500, effect: () => { game.clickPower += 0.3 }, purchased: false, unlocked: true, emoji: '🌀' },
+                { id: 'golden_mic', name: 'Курсы на авито', description: 'Увеличивает мощность кликов на 0.7', price: 2000, effect: () => { game.clickPower += 0.7 }, purchased: false, unlocked: true, emoji: '🌟' },
+                { id: 'auto_tune', name: 'Спросить у GPT', description: 'Увеличивает мощность кликов на 1.5', price: 5000, effect: () => { game.clickPower += 1.5 }, purchased: false, unlocked: true, emoji: '🎚️' },
+                { id: 'mic_stand', name: 'Скачать Ableton', description: 'Гитары производят в 2 раза больше', price: 10000, effect: () => { 
                     game.producers.find(p => p.id === 'guitar').baseCps *= 2 
                 }, purchased: false, unlocked: false, emoji: '🎸' },
                 { id: 'amplifier', name: 'Усилитель', description: 'Барабаны производят в 2 раза больше', price: 50000, effect: () => { 
@@ -1500,3 +1500,4 @@
     </script>
 </body>
 </html>
+
