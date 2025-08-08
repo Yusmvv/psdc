@@ -492,14 +492,14 @@
                 }, purchased: false, unlocked: false }
             ],
             achievements: [
-                { id: 'first_click', name: 'Первый шаг', description: 'Сделайте первый клик', reward: '+0.1 к мощности кликов', condition: () => game.totalClicks >= 1, unlocked: false, effect: () => { game.clickPower += 0.1 } },
-                { id: 'hundred_clicks', name: 'Начинающий артист', description: 'Сделайте 100 кликов', reward: '+1 к мощности кликов', condition: () => game.totalClicks >= 100, unlocked: false, effect: () => { game.clickPower += 1 } },
-                { id: 'thousand_clicks', name: 'Опытный музыкант', description: 'Сделайте 1,000 кликов', reward: 'Все клики +10%', condition: () => game.totalClicks >= 1000, unlocked: false, effect: () => { game.clickPower *= 1.1 } },
-                { id: 'first_producer', name: 'Первая запись', description: 'Купите первого производителя', reward: 'Микрофоны +50%', condition: () => game.producers[0].owned >= 1, unlocked: false, effect: () => { game.producers[0].baseCps *= 1.5 } },
-                { id: 'hundred_producers', name: 'Музыкальная фабрика', description: 'Иметь 100 производителей', reward: 'Все производители +5%', condition: () => game.producers.reduce((sum, p) => sum + p.owned, 0) >= 100, unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.05) } },
-                { id: 'million_cookies', name: 'Популярный хит', description: 'Заработайте 1,000,000 битов', reward: 'Все производители +10%', condition: () => game.totalCookies >= 1000000, unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.1) } },
-                { id: 'billion_cookies', name: 'Мегазвезда', description: 'Заработайте 1,000,000,000 битов', reward: 'Все производители +25%', condition: () => game.totalCookies >= 1000000000, unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.25) } },
-                { id: 'all_upgrades', name: 'Легенда звука', description: 'Купите все улучшения', reward: 'Все производители +50%', condition: () => game.upgrades.every(u => u.purchased), unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.5) } }
+                { id: 'first_click', name: 'Лил бро', description: 'Сделайте первый клик', reward: '+0.1 к мощности кликов', condition: () => game.totalClicks >= 1, unlocked: false, effect: () => { game.clickPower += 0.1 } },
+                { id: 'hundred_clicks', name: 'Начинаешь раздражать', description: 'Сделайте 100 кликов', reward: '+1 к мощности кликов', condition: () => game.totalClicks >= 100, unlocked: false, effect: () => { game.clickPower += 1 } },
+                { id: 'thousand_clicks', name: 'Релиза не будет', description: 'Сделайте 1,000 кликов', reward: 'Все клики +10%', condition: () => game.totalClicks >= 1000, unlocked: false, effect: () => { game.clickPower *= 1.1 } },
+                { id: 'first_producer', name: 'Это игра бесполезна', description: 'Купите первого производителя', reward: 'Микрофоны +50%', condition: () => game.producers[0].owned >= 1, unlocked: false, effect: () => { game.producers[0].baseCps *= 1.5 } },
+                { id: 'hundred_producers', name: 'Чел ты', description: 'Иметь 100 производителей', reward: 'Все производители +5%', condition: () => game.producers.reduce((sum, p) => sum + p.owned, 0) >= 100, unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.05) } },
+                { id: 'million_cookies', name: 'Пора на завод камни точить', description: 'Заработайте 1,000,000 битов', reward: 'Все производители +10%', condition: () => game.totalCookies >= 1000000, unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.1) } },
+                { id: 'billion_cookies', name: '2 и 2 сложил', description: 'Заработайте 1,000,000,000 битов', reward: 'Все производители +25%', condition: () => game.totalCookies >= 1000000000, unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.25) } },
+                { id: 'all_upgrades', name: 'Тебе делать нехуй?', description: 'Купите все улучшения', reward: 'Все производители +50%', condition: () => game.upgrades.every(u => u.purchased), unlocked: false, effect: () => { game.producers.forEach(p => p.baseCps *= 1.5) } }
             ],
             eventLog: []
         };
@@ -937,3 +937,4 @@
     </script>
 </body>
 </html>
+
